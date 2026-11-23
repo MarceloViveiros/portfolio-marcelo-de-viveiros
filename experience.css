@@ -1,0 +1,12 @@
+.hero-visual {isolation:isolate;perspective:800px;background:radial-gradient(ellipse at var(--x,55%) var(--y,45%),#5942ad80,transparent 57%),radial-gradient(#887fd955 1px,transparent 1.5px);background-size:auto,17px 17px}
+.hero-visual:before {content:"";position:absolute;inset:12%;border-radius:50%;background:conic-gradient(from 35deg,transparent 48%,#abff3655,transparent 63%,#926cff66,transparent 85%);filter:blur(12px);animation:field 14s linear infinite;pointer-events:none}
+@keyframes field {to{transform:rotate(1turn)}}
+.atelier {background:#faf4e8;color:#32251d;padding:clamp(2rem,7vw,8rem);display:grid;grid-template-columns:4fr 6fr;gap:5vw;align-items:center}
+.atelier h2,.journal h2 {font:normal clamp(3rem,6vw,7rem)/.97 Georgia,serif;letter-spacing:-.055em;margin:1.2rem 0}
+.atelier h2 i {color:#ab472a}.atelier p {max-width:37ch}.atelier a {display:inline-block;color:#612f21;border-bottom:1px solid;margin:1.5rem 0}
+.atelier figure {margin:0;transform:rotate(-2deg)}.atelier img {width:100%;display:block;box-shadow:0 24px 48px #58341130}.atelier figcaption {font:italic 1rem Georgia;margin-top:1rem}
+.store-filter,.note-controls {display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin:2rem 0}.store-filter select,.note-controls button {font:inherit;padding:.65rem 1rem;border-radius:2rem;border:1px solid currentColor;color:inherit;background:transparent}.store-filter option {color:#171922}.project[hidden]{display:none!important}
+.journal {background:#ddd7fd;color:#29223b}.note-track {display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding:1rem 0}.note-track article {box-sizing:border-box;flex:0 0 min(72vw,36rem);min-height:19rem;padding:clamp(1.4rem,4vw,4rem);background:#37275f;color:white;scroll-snap-align:start}.note-track article:nth-child(2){background:#d9ff55;color:#253015}.note-track article:nth-child(3){background:#fb946d;color:#3b1912}.note-track h3 {font:italic clamp(2.3rem,5vw,4.8rem)/1 Georgia;margin:2rem 0 1rem}.note-track p {max-width:37ch}.note-controls button {cursor:pointer}
+@supports(animation-timeline:view()){.atelier figure {animation:unfold linear both;animation-timeline:view();animation-range:entry 0% cover 45%}@keyframes unfold{from{transform:translateY(3rem) rotate(3deg)}to{transform:rotate(-2deg)}}}
+@media(max-width:720px){.atelier{grid-template-columns:1fr;padding:3rem 1.5rem}.atelier figure{margin:1rem 0}}
+@media(prefers-reduced-motion:reduce){.hero-visual:before,.atelier figure{animation:none}}
